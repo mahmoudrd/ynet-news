@@ -7,7 +7,9 @@ pipeline{
 		
 		stage('clone'){
 			steps{
+				
 				git branch: 'main', url: 'https://github.com/mahmoudrd/ynet-news.git'
+				
 			}
 		}
 		
