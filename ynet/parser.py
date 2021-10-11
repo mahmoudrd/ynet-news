@@ -8,6 +8,7 @@ import sys
 URL = "http://www.ynet.co.il/Integration/StoryRss2.xml"
 
 
+
 def get_ynet(url=URL):
 	res = requests.get(url)
 	if res.status_code != 200:
