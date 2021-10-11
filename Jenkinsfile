@@ -5,9 +5,9 @@ pipeline{
 	stages{
 
 		
-		stage('Clone'){
+		stage('clone'){
 			steps{
-				git branch: 'main', url: 'git@github.com:mahmoudrd/JenkinsTask.git'
+				git branch: 'main', url: 'https://github.com/mahmoudrd/ynet-news.git'
 			}
 		}
 		
@@ -22,7 +22,7 @@ pipeline{
 
 		stage('slack sending'){
 			steps{
-				slackSend channel: '#breakingnews', message: 'here we go!'
+				slackSend channel: '#breakingnews', message: 'we are up!'
 			}
 		}
 	}
