@@ -14,7 +14,7 @@ def get_ynet(url=URL):
 	if res.status_code != 200:
 		sys.exit('\x1b[31m' + "Page not found" + '\x1b[0m')
 	doc = lxml.etree.fromstring(res.content)
-	cells = doc.xpath("//item")
+	news = doc.xpath("//item")
 	return news
 
 
